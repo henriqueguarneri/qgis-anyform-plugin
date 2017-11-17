@@ -1,0 +1,39 @@
+# This file contains metadata for your plugin. Since 
+# version 2.0 of QGIS this is the proper way to supply 
+# information about a plugin. The old method of 
+# embedding metadata in __init__.py will 
+# is no longer supported since version 2.0.
+
+# This file should be included when you package your plugin.# Mandatory items:
+
+[general]
+name=Anisotropic Transformation
+qgisMinimumVersion=2.0
+description=Performs an anisotropic transformation over a grid according to a ordered discrete set of points.
+version=0.1
+author=Henrique Guarneri
+email=henriqueguarneri@gmail.com
+
+about=Name: AnyForm Autor: Henrique Guarneri Contact: henriqueguarneri.github.io Date: 14.11.2017 Qgis plugin to perform an anisotropic transformation over a grid according to a ordered discrete set of points. Inspired by the necessity of river cross-section interpolations with anisotropic krige interpolations. Yet, it coud be applied to other ends.
+
+tracker=https://github.com/henriqueguarneri/qgis-anyform-plugin/issues
+repository=https://github.com/henriqueguarneri/qgis-anyform-plugin.git
+# End of mandatory metadata
+
+# Recommended items:
+
+# Uncomment the following line and add your changelog:
+# changelog=
+
+# Tags are comma separated with spaces allowed
+tags=anisotropy, transformation, anisotropic, stretch, river, path
+
+homepage=https://github.com/henriqueguarneri/qgis-anyform-plugin.git
+category=Plugins
+icon=icon.png
+# experimental flag
+experimental=True
+
+# deprecated flag (applies to the whole plugin, not just a single version)
+deprecated=False
+
