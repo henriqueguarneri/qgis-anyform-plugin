@@ -210,6 +210,7 @@ class AnyForm:
         def selectFile():
             self.dlg.OutputlineEdit.setText(QFileDialog.getSaveFileName())
         self.dlg.pushButton.clicked.connect(selectFile)
+        output_location = self.dlg.OutputlineEdit.text()
         # Run the dialog event loop
         result = self.dlg.exec_()
 
@@ -244,5 +245,5 @@ class AnyForm:
             # Run transformation
             trg.run(progressbar = progress)
             del trg
-            bg.save_layer(basegridLayer)
+            bg.save_layer(basegridLayer, output=output_location )
             iface.messageBar().clearWidgets()
