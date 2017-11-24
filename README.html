@@ -2,8 +2,12 @@ A QGIS plugin to apply anisotropic transformation to a grid based on a path.
 
 The proper interpolation of river’s main channel longitudinal characteristics have to take in consideration the intrinsic anisotropic patterns of river systems. That is, the covariance of characteristics is stronger along the longitudinal direction then cross-section wise.
 
-This necessity has been already been reviewed in literature, Merwade, Maidment and Hodges (2005) have suggested a coordinate transformation from the typical (E,N) coordinate system to one the follows the rivers main channel. The transformation consist of attributing to every point a (s,d) coordinate, where s is the distance of a cross-section to an arbitrary beginning counted through the river’s center path or thalweg, and d the distance from a point to the intersection of the center path with the cross-section it belongs.
+This necessity has already been reviewed in literature, Merwade, Maidment and Hodges (2005) have suggested a coordinate transformation from the typical (E,N) coordinate system to one the follows the rivers main channel. The transformation consist of attributing to every point a (s,d) coordinate, where s is the distance of a cross-section to an arbitrary beginning counted through the river’s center path or thalweg, and d the distance from a point to the intersection of the center path with the cross-section it belongs.
 
 It has been shown that interpolations performed over the transformed data are more acurate for river systems.
 
 This plug-in allows this transformation based on the method described in GUARNERI (2017) and the anisotroPy python module (https://github.com/henriqueguarneri/anisotroPy).
+
+Merwade, V.; Maidment, D.; Hodges, B. (2005) Geospatial Representation of River Channels. Journal of Hydrologic Engineering, 10 (3), 243-251.
+
+Guarneri, H. (2017) Methods for the Analysis and Design of Inland Waterways and Application for the Paraguay River Waterway. Master Dissertation. Federal university of Paraná.

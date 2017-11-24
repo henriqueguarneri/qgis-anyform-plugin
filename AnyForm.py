@@ -70,8 +70,7 @@ class AnyForm:
         # TODO: We are going to let the user set this up in a future iteration
         self.toolbar = self.iface.addToolBar(u'AnyForm')
         self.toolbar.setObjectName(u'AnyForm')
-
-        
+       
 
         
 
@@ -206,11 +205,12 @@ class AnyForm:
         """Run method that performs all the real work"""
         # show the dialog
         self.dlg.show()
-
+        self.output_location = None
         def selectFile():
-            self.dlg.OutputlineEdit.setText(QFileDialog.getSaveFileName())
+            self.output_location = QFileDialog.getSaveFileName()
+            self.dlg.OutputlineEdit.setText(self.output_location)
         self.dlg.pushButton.clicked.connect(selectFile)
-        output_location = self.dlg.OutputlineEdit.text()
+        #output_location = self.dlg.OutputlineEdit.text()
         # Run the dialog event loop
         result = self.dlg.exec_()
 
@@ -245,5 +245,6 @@ class AnyForm:
             # Run transformation
             trg.run(progressbar = progress)
             del trg
-            bg.save_layer(basegridLayer, output=output_location )
+            
+            bg.save_layer(basegridLayer, output=self.output_location )
             iface.messageBar().clearWidgets()
