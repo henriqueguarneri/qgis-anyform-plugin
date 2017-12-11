@@ -200,6 +200,7 @@ class AnyForm:
         progressMessageBar.layout().addWidget(progress)
         iface.messageBar().pushWidget(progressMessageBar, iface.messageBar().INFO)
         return progress
+    
 
     def run(self):
         """Run method that performs all the real work"""
